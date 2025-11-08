@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  generate:
+    desc: "Generate Go and gRPC code from oms.proto"
+    cmds:
+      - protoc -I gRPC gRPC/oms.proto --go_out=gRPC/gen/go --go_opt=paths=source_relative --go-grpc_out=gRPC/gen/go --go-grpc_opt=paths=source_relative
